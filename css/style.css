@@ -1,3 +1,13 @@
+:root {
+    --light-color: #ffffff;
+    --dark-text: #222222;
+    --btn-bg: #1e90ff;
+    --hover-color: rgba(30, 144, 255,0.8);
+    --active-color: rgba(30, 144, 255,0.6);
+}
+
+
+
 /* GLOBAL */
 html {
     box-sizing: border-box;
@@ -23,8 +33,8 @@ body {
     font-weight: 400;
     font-style: normal;
     flex-direction: column;
-    background-color: #fff;
-    color: #222;
+    background-color:  var(--light-color);
+    color: var(--dark-text);
 }
 
 img {
@@ -70,17 +80,26 @@ img {
 .hero-header {
     width: 285px;
     font-size: 24px;
-    color:#fff;
+    color: var(--light-color);
 
 }
 
 .hero-link {
     text-decoration: none;
     text-transform: uppercase;
-    background-color: #1e90ff;
-    color: #fff;
+    background-color: var(--btn-bg);
+    color:  var(--light-color);
     line-height: 24px;
     display: inline-block;
+    transition: background-color 0.4s ease;
+}
+
+.hero-link:hover {
+    background-color:var(--hover-color);
+}
+
+.hero-link:active {
+    background-color:var(--active-color);
 }
 
 .hero-link-inner {
@@ -105,7 +124,7 @@ img {
 
 .content-header {
     font-size: 24px;
-    color:#222;
+    color:var(--dark-text);
 }
 
 .content-header::after {
@@ -136,10 +155,20 @@ img {
 }
 .vlog-header {
     font-size: 18px;
-    color:#222;
+    color:var(--dark-text);
     margin: 0px;
     margin-bottom: 4px;
+    transition: color 0.4s ease;
+    cursor: pointer;
 }
+.vlog-header:hover {
+    color:var(--btn-bg);
+}
+
+.vlog-header:active {
+    color:var(--active-color);
+}
+
 .vlog-icons {
     font-size: 14px;
     font-weight: 400;
@@ -174,12 +203,21 @@ img {
     width: 100%;
     text-decoration: none;
     text-transform: uppercase;
-    background-color: #1e90ff;
-    color: #fff;
+    background-color: var(--btn-bg);
+    color:  var(--light-color);
     line-height: 24px;
     display: inline-block;
     border-radius: 4px;
     margin-top: 25px;
+    transition: background-color 0.4s ease;
+}
+
+.video-link:hover {
+    background-color:var(--hover-color);
+}
+
+.video-link:active {
+    background-color:var(--active-color);
 }
 
 .video-link-inner {
